@@ -1,0 +1,23 @@
+the key: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
+
+typescript:
+fetch("https://openrouter.ai/api/v1/chat/completions", {
+  method: "POST",
+  headers: {
+    "Authorization": "Bearer <OPENROUTER_API_KEY>",
+    "HTTP-Referer": "<YOUR_SITE_URL>", // Optional. Site URL for rankings on openrouter.ai.
+    "X-Title": "<YOUR_SITE_NAME>", // Optional. Site title for rankings on openrouter.ai.
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    "model": "meta-llama/llama-3.3-8b-instruct:free",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What is the meaning of life?"
+      }
+    ]
+  })
+});
+
+the model:meta-llama/llama-3.3-8b-instruct:free
